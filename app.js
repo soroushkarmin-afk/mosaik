@@ -1,6 +1,8 @@
 (() => {
   'use strict';
 
+  const I18N_FA = {"Mosaic — Set Theory Puzzles":"موزاییک — معماهای نظریه مجموعه‌ها","Loading Mosaic":"در حال بارگذاری موزاییک","A little logic, a little wonder.":"کمی منطق، کمی شگفتی.","GETTING THINGS READY":"در حال آماده‌سازی","Mosaic — a calm, playful way to learn set theory through Venn diagrams.":"موزاییک؛ راهی آرام و سرگرم‌کننده برای یادگیری نظریه مجموعه‌ها با نمودار ون.","Play":"بازی","Daily puzzle":"معمای روزانه","Collection":"مجموعه","0 day streak":"۰ روز پیاپی","Two things in common":"دو ویژگی مشترک","Find an element that belongs to both sets.":"عضوی را پیدا کنید که به هر دو مجموعه تعلق دارد.","No timer. Find your rhythm.":"بدون زمان‌سنج؛ با آرامش پیش بروید.","YOUR SCORE":"امتیاز شما","Personal best:":"بهترین امتیاز:","Level progress":"پیشرفت مرحله","0 XP earned so far":"هنوز امتیاز تجربه‌ای کسب نشده","Levels cleared":"مراحل تکمیل‌شده","Need a hint?":"راهنمایی می‌خواهید؟","Undo":"برگرداندن","Restart":"شروع دوباره","Progress saved on this device":"پیشرفت روی این دستگاه ذخیره شد","Your progress stays in this browser using local storage.":"پیشرفت شما در این مرورگر ذخیره می‌شود.","8 moves left":"۸ حرکت باقی مانده","FIND THE REGION THAT MATCHES":"ناحیهٔ مطابق را پیدا کنید","Outside":"بیرون","A only":"فقط A","B only":"فقط B","A and B":"A و B","Choose a region in the diagram to place your tile.":"برای قرار دادن مهره، یک ناحیه از نمودار انتخاب کنید.","Choose a region to place your tile.":"برای قرار دادن مهره یک ناحیه انتخاب کنید.","Take a breath":"نفسی تازه کنید","The game and timer are paused.":"بازی و زمان‌سنج متوقف شده‌اند.","Resume play →":"ادامهٔ بازی ←","Room for a tip?":"یک نکته؟","Find a fit":"ناحیهٔ مناسب را پیدا کنید","Choose the region that matches the logical expression.":"ناحیه‌ای را انتخاب کنید که با عبارت منطقی مطابقت دارد.","Read the circles":"دایره‌ها را بخوانید","A means inside circle A. AND means both conditions must be true.":"A یعنی داخل دایرهٔ A. AND یعنی هر دو شرط باید درست باشند.","Think ahead":"از قبل فکر کنید","Solve the level before your moves run out.":"پیش از تمام‌شدن حرکت‌ها، مرحله را حل کنید.","A LITTLE SOMETHING AHEAD":"یک جایزه در انتظار شماست","Golden hour":"ساعت طلایی","Unlock after level 4":"پس از مرحلهٔ ۴ باز می‌شود","Today’s puzzle":"معمای امروز","Find the region that satisfies":"ناحیه‌ای را پیدا کنید که این عبارت را برآورده می‌کند:","Check answer ✓":"بررسی پاسخ ✓","YOUR LITTLE UNIVERSE":"جهان کوچک شما","Unlock new looks by learning one set at a time.":"با یادگیری مجموعه‌ها، ظاهرهای تازه باز کنید.","Sound off":"صدای خاموش","Sound on":"صدای روشن","Music off":"موسیقی خاموش","Music on":"موسیقی روشن","How to play":"راهنمای بازی","Settings":"تنظیمات","Close":"بستن","A on its own":"فقط A","B on its own":"فقط B","Beyond both":"بیرون از هر دو","Shared space":"ناحیهٔ مشترک","A little precision":"کمی دقت","Look for the lens-shaped area where both circles overlap.":"ناحیهٔ عدسی‌شکلِ هم‌پوشانی دو دایره را پیدا کنید.","Choose the part of circle A that does not touch circle B.":"بخشی از دایرهٔ A را انتخاب کنید که با دایرهٔ B هم‌پوشانی ندارد.","Choose an element in A, but not in B.":"عضوی را انتخاب کنید که در A باشد، اما در B نباشد.","The correct region is inside B and outside A.":"ناحیهٔ درست داخل B و بیرون A است.","Choose an element in B, but not in A.":"عضوی را انتخاب کنید که در B باشد، اما در A نباشد.","The answer is outside both circles.":"پاسخ، ناحیهٔ بیرون از هر دو دایره است.","Find an element that belongs to neither set.":"عضوی را پیدا کنید که به هیچ‌یک از دو مجموعه تعلق ندارد.","Both memberships must be true.":"عضویت در هر دو مجموعه باید درست باشد.","Identify the intersection of A and B.":"اشتراک A و B را مشخص کنید.","Avoid the overlap: A only.":"ناحیهٔ هم‌پوشانی را کنار بگذارید: فقط A.","Select the part unique to set A.":"بخش مخصوص مجموعهٔ A را انتخاب کنید.","Garden":"باغ","A calm, leafy green palette.":"ترکیبی آرام از سبزهای برگ‌مانند.","Available from the start":"از ابتدا در دسترس است","Warm sunlight and soft honey tones.":"نور گرم خورشید و رنگ‌های ملایم عسلی.","Complete level 4":"مرحلهٔ ۴ را کامل کنید","Lavender fields":"مزارع اسطوخودوس","A gentle purple daydream.":"رؤیایی آرام با رنگ‌های بنفش.","Complete all 6 levels":"هر ۶ مرحله را کامل کنید","Outside both sets":"بیرون از هر دو مجموعه","Unlocked":"بازشده","Equipped":"انتخاب‌شده","Equip":"انتخاب","Locked":"قفل‌شده","Level complete":"مرحله کامل شد","Your progress has been saved on this device.":"پیشرفت شما روی این دستگاه ذخیره شده است.","Next level →":"مرحلهٔ بعد ←","Lovely!":"عالی است!","Hint revealed. A small score penalty applies if you solve this level.":"راهنمایی نمایش داده شد. با حل این مرحله، کمی از امتیازتان کم می‌شود.","Last move cleared. Try again.":"حرکت آخر لغو شد. دوباره تلاش کنید.","Fresh start. Choose a region.":"از نو شروع شد. یک ناحیه انتخاب کنید.","Give it another go":"یک بار دیگر تلاش کنید","The puzzle is paused. Restart to try again.":"معما متوقف شده است. برای تلاش دوباره، مرحله را از نو شروع کنید.","Restart level →":"شروع دوبارهٔ مرحله ←","Choose one region":"یک ناحیه انتخاب کنید","Get today’s puzzle right to earn XP and build your streak.":"معمای امروز را حل کنید تا امتیاز تجربه بگیرید و زنجیرهٔ روزانه‌تان را ادامه دهید.","Unlocked — equip it in Collection":"باز شده — از بخش مجموعه انتخابش کنید","Used":"استفاده شد","Completed today ✓":"امروز تکمیل شد ✓","Time is up":"زمان تمام شد","Restart the level to try again.":"برای تلاش دوباره، مرحله را از نو شروع کنید.","Choose a region first.":"ابتدا یک ناحیه انتخاب کنید.","Not quite yet — try another region.":"هنوز درست نیست؛ ناحیهٔ دیگری را امتحان کنید.","You have already recorded today’s puzzle.":"معمای امروز را قبلاً ثبت کرده‌اید.","Daily puzzle recorded. +25 XP — come back tomorrow to keep your streak.":"معمای روزانه ثبت شد. ۲۵+ امتیاز تجربه؛ فردا برگردید تا زنجیره‌تان ادامه یابد.","YOUR PREFERENCES":"تنظیمات دلخواه شما","Sound effects":"جلوه‌های صوتی","Feedback for moves and answers":"بازخورد صوتی حرکت‌ها و پاسخ‌ها","Background music":"موسیقی پس‌زمینه","Gentle focus ambience":"موسیقی ملایم برای تمرکز","Preferences and game progress are saved on this device. No account or server is required.":"تنظیمات و پیشرفت بازی روی همین دستگاه ذخیره می‌شوند. نیازی به حساب کاربری یا سرور نیست.","Done":"تمام","On":"روشن","Off":"خاموش","Start this level over?":"این مرحله از نو شروع شود؟","A FRESH START":"شروعی تازه","Your current moves and timer will reset. Your saved score and completed levels will stay.":"حرکت‌ها و زمان‌سنج فعلی بازنشانی می‌شوند؛ امتیاز ذخیره‌شده و مراحل تکمیل‌شده باقی می‌مانند.","Keep playing":"ادامهٔ بازی","How to play Mosaic":"روش بازی موزاییک","THE BASICS":"اصول اولیه","Read the expression.":"عبارت را بخوانید.","AND means both conditions must be true. NOT means a set condition must be false.":"AND یعنی هر دو شرط باید درست باشند. NOT یعنی شرط مجموعه باید نادرست باشد.","Choose a region.":"یک ناحیه انتخاب کنید.","Tap one of the four labeled regions. The overlap belongs to both A and B.":"یکی از چهار ناحیهٔ مشخص‌شده را انتخاب کنید. ناحیهٔ هم‌پوشانی متعلق به A و B است.","Learn as you go.":"در مسیر یاد بگیرید.","Correct answers earn points and XP. Hints reduce your score; complete levels to unlock themes.":"پاسخ درست امتیاز و XP می‌دهد. راهنمایی امتیاز را کم می‌کند؛ مراحل را کامل کنید تا پوسته‌ها باز شوند.","Got it":"متوجه شدم","Playing locally":"بازی به‌صورت محلی","YOUR PLAYER PROFILE":"نمایهٔ بازیکن شما","Mosaic is running as a standalone app. Your score, unlocked themes, and daily streak are saved only in this browser. Google sign-in and cloud sync are not included in this no-build version.":"موزاییک به‌صورت مستقل اجرا می‌شود. امتیاز، پوسته‌های بازشده و زنجیرهٔ روزانه فقط در این مرورگر ذخیره می‌شوند. ورود با گوگل و همگام‌سازی ابری در این نسخه وجود ندارد.","Sounds good":"بسیار خوب","Pause game":"توقف بازی","Pause or resume":"توقف یا ادامه","Pause timer":"توقف زمان‌سنج","Player profile":"نمایهٔ بازیکن","Main navigation":"پیمایش اصلی","Choose outside both sets":"انتخاب بیرون از هر دو مجموعه","Choose A only":"انتخاب فقط A","Choose B only":"انتخاب فقط B","Choose A and B overlap":"انتخاب هم‌پوشانی A و B","Dismiss hint":"بستن راهنمایی"};
+
   const LEVELS = [
     {
       id: 1,
@@ -818,5 +820,116 @@ function isCompleted() {
     // Keep the intro visible briefly, then reveal the game.
     setTimeout(hideLoader, 1800);
   }
+
+  
+
+
+  // Bilingual interface layer. It only changes presentation, never game state.
+  let language = 'en';
+  const originalText = new WeakMap();
+  const translatedAttributes = ['title', 'aria-label', 'placeholder', 'alt'];
+  function translateText(value, lang) {
+    const trimmed = value.trim();
+    if (!trimmed) return value;
+    let result = trimmed;
+    if (lang === 'fa') {
+      result = I18N_FA[trimmed] || translateDynamic(trimmed, 'fa') || trimmed;
+    } else {
+      const found = Object.keys(I18N_FA).find(k => I18N_FA[k] === trimmed);
+      result = found || translateDynamic(trimmed, 'en') || trimmed;
+    }
+    return value.replace(trimmed, result);
+  }
+  function translateDynamic(s, lang) {
+    const patterns = [
+      [/^(\d+) day streak$/, n => `${n} روز پیاپی`],
+      [/^(\d+) moves left$/, n => `${n} حرکت باقی مانده`],
+      [/^(\d+) of (\d+)$/, (a,b) => `${a} از ${b}`],
+      [/^(\d+) XP to next milestone$/, n => `${n} امتیاز تجربه تا هدف بعدی`],
+      [/^(\d+)s left on the challenge$/, n => `${n} ثانیه تا پایان چالش`],
+      [/^Solve (.+) before your moves run out\.$/, s => `پیش از تمام‌شدن حرکت‌ها، «${I18N_FA[s] || s}» را حل کنید.`],
+      [/^Out of moves\. The target is (.+)\. Restart to try again\.$/, s => `حرکت‌ها تمام شدند. پاسخ درست «${I18N_FA[s] || s}» است. برای تلاش دوباره مرحله را از نو شروع کنید.`],
+      [/^Not quite — (.+) doesn’t match (.+)\. (\d+) moves left\.$/, (a,b,c) => `هنوز درست نیست؛ ${I18N_FA[a] || a} با ${b} مطابقت ندارد. ${c} حرکت باقی مانده.`],
+      [/^Lovely! \+(\d+) points and \+(\d+) XP\.$/, (a,b) => `عالی است! ${a}+ امتیاز و ${b}+ امتیاز تجربه.`],
+      [/^Level complete · \+(\d+) points$/, n => `مرحله کامل شد · ${n}+ امتیاز`],
+      [/^(.+) theme equipped$/, s => `پوستهٔ ${I18N_FA[s] || s} انتخاب شد`],
+      [/^GARDEN \/ LEVEL (\d+)$/, n => `باغ / مرحلهٔ ${n}`],
+      [/^(\d+) XP earned so far$/, n => `تا اینجا ${n} امتیاز تجربه کسب شده`]
+    ];
+    for (const [re, fn] of patterns) {
+      const m = s.match(re);
+      if (m) return lang === 'fa' ? fn(...m.slice(1)) : (Object.keys(I18N_FA).find(k => I18N_FA[k] === s) || s);
+    }
+    if (lang === 'en') {
+      const reversePatterns = [
+        [/^(\d+) روز پیاپی$/, n => `${n} day streak`],
+        [/^(\d+) حرکت باقی مانده$/, n => `${n} moves left`],
+        [/^(\d+) از (\d+)$/, (a,b) => `${a} of ${b}`],
+        [/^(\d+) امتیاز تجربه تا هدف بعدی$/, n => `${n} XP to next milestone`],
+        [/^باغ \/ مرحلهٔ (\d+)$/, n => `GARDEN / LEVEL ${n}`],
+        [/^مرحله کامل شد · (\d+)\+ امتیاز$/, n => `Level complete · +${n} points`],
+        [/^پوستهٔ (.+) انتخاب شد$/, n => `${Object.keys(I18N_FA).find(k => I18N_FA[k] === n) || n} theme equipped`]
+      ];
+      for (const [re, fn] of reversePatterns) {
+        const m = s.match(re);
+        if (m) return fn(...m.slice(1));
+      }
+    }
+    return null;
+  }
+  function translateNode(node) {
+    if (node.nodeType === Node.TEXT_NODE) {
+      const translated = translateText(node.nodeValue, language);
+      if (translated !== node.nodeValue) node.nodeValue = translated;
+    } else if (node.nodeType === Node.ELEMENT_NODE) {
+      for (const attr of translatedAttributes) {
+        if (node.hasAttribute(attr)) node.setAttribute(attr, translateText(node.getAttribute(attr), language));
+      }
+      node.childNodes.forEach(translateNode);
+    }
+  }
+  function applyLanguage(lang) {
+    if (lang !== 'en' && lang !== 'fa') lang = 'en';
+    language = lang;
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === 'fa' ? 'rtl' : 'ltr';
+    document.title = lang === 'fa' ? 'موزاییک — معماهای نظریه مجموعه‌ها' : 'Mosaic — Set Theory Puzzles';
+    const desc = document.querySelector('meta[name="description"]');
+    if (desc) desc.content = lang === 'fa' ? I18N_FA['Mosaic — a calm, playful way to learn set theory through Venn diagrams.'] : 'Mosaic — a calm, playful way to learn set theory through Venn diagrams.';
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.dataset.i18n;
+      if (lang === 'fa' && I18N_FA[key]) el.textContent = I18N_FA[key];
+      else if (lang === 'en') el.textContent = key;
+    });
+    document.body.querySelectorAll('*').forEach(el => {
+      if (el.id === 'languageSwitch') return;
+      for (const attr of translatedAttributes) if (el.hasAttribute(attr)) {
+        const val = el.getAttribute(attr);
+        el.setAttribute(attr, translateText(val, lang));
+      }
+    });
+    translateNode(document.body);
+    // Refresh dynamic labels while retaining all game variables and progress.
+    render();
+    document.getElementById('languageSwitch').textContent = lang === 'fa' ? 'فارسی · EN' : 'EN · فارسی';
+    try { localStorage.setItem('mosaik-language', lang); } catch {}
+  }
+  const languageSwitch = document.getElementById('languageSwitch');
+  if (languageSwitch) languageSwitch.addEventListener('click', () => applyLanguage(language === 'en' ? 'fa' : 'en'));
+  const translationObserver = new MutationObserver(records => {
+    if (translationObserverBusy) return;
+    translationObserverBusy = true;
+    records.forEach(record => {
+      if (record.type === 'childList') record.addedNodes.forEach(translateNode);
+      else if (record.type === 'characterData') { const translated = translateText(record.target.nodeValue, language); if (translated !== record.target.nodeValue) record.target.nodeValue = translated; }
+    });
+    translationObserverBusy = false;
+  });
+  let translationObserverBusy = false;
+  translationObserver.observe(document.body, {subtree:true, childList:true, characterData:true});
+  try {
+    const savedLanguage = localStorage.getItem('mosaik-language');
+    applyLanguage(savedLanguage === 'fa' || savedLanguage === 'en' ? savedLanguage : 'en');
+  } catch { applyLanguage('en'); }
 
 })();
