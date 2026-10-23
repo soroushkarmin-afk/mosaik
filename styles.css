@@ -1632,10 +1632,10 @@ button:disabled {
   background: var(--card, #fffdf8);
   color: var(--ink, #263c35);
   border-radius: 999px;
-  padding: .4rem .65rem;
+  padding: .5rem .85rem;
   font: inherit;
-  font-size: .70rem;
-  font-weight: 600;
+  font-size: .80rem;
+  font-weight: 700;
   cursor: pointer;
   white-space: nowrap;
 }
@@ -1664,5 +1664,5 @@ html[dir="rtl"] p,
 html[dir="rtl"] .feedback,
 html[dir="rtl"] .modal { line-height: 1.8; }
 @media (max-width: 640px) {
-  .language-switch { padding: .35rem .5rem; font-size: .72rem; }
+  .language-switch { padding: .40rem .6rem; font-size: .78rem; }
 }
