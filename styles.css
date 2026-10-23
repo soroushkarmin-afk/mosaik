@@ -1520,138 +1520,108 @@ button:disabled {
    MOSAIC INTRO LOADER
 ========================= */
 
+
 #mosaic-loader {
-    position: fixed;
-    inset: 0;
-    z-index: 9999;
-    display: grid;
-    place-items: center;
-    background: #f5f1e8;
-    opacity: 1;
-    visibility: visible;
-    transition: opacity .65s ease, visibility .65s ease;
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f1e8;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
 }
 
 #mosaic-loader.loader-hidden {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
-.loader-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    animation: loader-enter .8s cubic-bezier(.2,.8,.2,1) both;
+#mosaic-loader .loader-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 24px;
 }
 
-.loader-mark {
-    width: 58px;
-    height: 58px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5px;
-    transform: rotate(-8deg);
-    animation: loader-float 2.5s ease-in-out infinite;
+#mosaic-loader .loader-mark {
+  display: grid;
+  grid-template-columns: repeat(2, 22px);
+  gap: 5px;
+  margin-bottom: 22px;
+  animation: mosaic-pulse 1.2s ease-in-out infinite alternate;
 }
 
-.loader-mark i {
-    display: block;
-    border-radius: 6px;
-    background: #286753;
+#mosaic-loader .loader-mark i {
+  display: block;
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  background: #286753;
 }
 
-.loader-mark i:nth-child(2) {
-    opacity: .7;
+#mosaic-loader .loader-mark i:nth-child(2) {
+  opacity: 0.7;
 }
 
-.loader-mark i:nth-child(3) {
-    opacity: .45;
+#mosaic-loader .loader-mark i:nth-child(3) {
+  opacity: 0.5;
 }
 
-.loader-mark i:nth-child(4) {
-    opacity: .85;
+#mosaic-loader .loader-mark i:nth-child(4) {
+  opacity: 0.85;
 }
 
-.loader-content h1 {
-    margin: 22px 0 0;
-    color: #263c35;
-    font: 500 52px/1.1 Fredoka, sans-serif;
-    letter-spacing: -1.5px;
+#mosaic-loader h1 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+  color: #263b32;
 }
 
-.loader-content h1 span {
-    color: #b98632;
+#mosaic-loader h1 span {
+  color: #286753;
 }
 
-.loader-caption {
-    margin: 10px 0 34px;
-    color: #849087;
-    font: 400 13px 'DM Sans', sans-serif;
+#mosaic-loader .loader-caption {
+  margin: 10px 0 26px;
+  color: #77766f;
+  font-size: 14px;
 }
 
-.loader-progress {
-    width: 154px;
-    height: 4px;
-    overflow: hidden;
-    border-radius: 10px;
-    background: #e3e6db;
+#mosaic-loader .loader-progress {
+  width: 180px;
+  height: 4px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #dedbd1;
 }
 
-.loader-progress-fill {
-    width: 40%;
-    height: 100%;
-    border-radius: inherit;
-    background: #286753;
-    animation: loader-progress 1.5s ease-in-out infinite;
+#mosaic-loader .loader-progress-fill {
+  width: 40%;
+  height: 100%;
+  border-radius: inherit;
+  background: #286753;
+  animation: mosaic-loading 1.4s ease-in-out infinite;
 }
 
-.loader-status {
-    margin-top: 15px;
-    color: #849087;
-    font: 800 9px 'DM Sans', sans-serif;
-    letter-spacing: 1.7px;
+#mosaic-loader .loader-status {
+  margin-top: 14px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #77766f;
 }
 
-@keyframes loader-enter {
-    from {
-        opacity: 0;
-        transform: translateY(14px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+@keyframes mosaic-loading {
+  from { transform: translateX(-110%); }
+  to { transform: translateX(350%); }
 }
 
-@keyframes loader-float {
-    0%, 100% {
-        transform: rotate(-8deg) translateY(0);
-    }
-    50% {
-        transform: rotate(-3deg) translateY(-5px);
-    }
+@keyframes mosaic-pulse {
+  from { transform: scale(0.92); }
+  to { transform: scale(1.05); }
 }
-
-@keyframes loader-progress {
-    0% {
-        transform: translateX(-120%);
-    }
-    100% {
-        transform: translateX(390%);
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .loader-content,
-    .loader-mark,
-    .loader-progress-fill {
-        animation: none;
-    }
-
-    .loader-progress-fill {
-        width: 100%;
-    }
-}
-
