@@ -12,24 +12,16 @@
 </head>
 
 <body>
-  
-<div id="mosaic-loader" aria-label="Loading Mosaic">
-  <div class="loader-content">
-    <div class="loader-mark">
-      <i></i><i></i><i></i><i></i>
+  <div id="mosaic-loader" role="status" aria-live="polite" aria-label="Loading Mosaic">
+    <div class="loader-content">
+      <div class="loader-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <h1>mosa<span>ik</span></h1>
+      <p class="loader-caption">A little logic, a little wonder.</p>
+      <div class="loader-progress" aria-hidden="true"><div class="loader-progress-fill"></div></div>
+      <p class="loader-status">GETTING THINGS READY</p>
     </div>
-
-    <h1>mosaic<span>.</span></h1>
-    <p class="loader-caption">A little play goes a long way.</p>
-
-    <div class="loader-progress">
-      <div class="loader-progress-fill"></div>
-    </div>
-
-    <span class="loader-status">PIECING THINGS TOGETHER</span>
   </div>
-</div>
-
+  
   <header class="topbar">
     <button class="brand" id="homeBtn" aria-label="Mosaic home"><span
         class="mosaic-mark"><i></i><i></i><i></i><i></i></span><span>mosaic</span></button>
@@ -38,7 +30,7 @@
       <button class="nav-tab" data-tab="daily">Daily puzzle <i></i></button>
       <button class="nav-tab" data-tab="collection">Collection <i></i></button>
     </nav>
-    <div class="player"><span class="streak"><span aria-hidden="true">🔥</span><b id="streakCount">0 day
+    <div class="player"><button class="language-switch" id="languageSwitch" type="button" aria-label="Switch language">EN · فارسی</button><span class="streak"><span aria-hidden="true">🔥</span><b id="streakCount">0 day
           streak</b></span><button class="avatar" id="profileBtn" title="Local player profile"
         aria-label="Player profile">✦</button></div>
   </header>
@@ -185,6 +177,9 @@
     </section>
   </div>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  
+
 </body>
 
 </html>
