@@ -1625,3 +1625,44 @@ button:disabled {
   from { transform: scale(0.92); }
   to { transform: scale(1.05); }
 }
+
+/* Bilingual support */
+.language-switch {
+  border: 1px solid var(--line, #d8ded5);
+  background: var(--card, #fffdf8);
+  color: var(--ink, #263c35);
+  border-radius: 999px;
+  padding: .45rem .7rem;
+  font: inherit;
+  font-size: .78rem;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+}
+html[dir="rtl"] body { text-align: start; }
+html[dir="rtl"] .topbar,
+html[dir="rtl"] .player,
+html[dir="rtl"] .nav-tabs,
+html[dir="rtl"] .footer,
+html[dir="rtl"] .audio-controls,
+html[dir="rtl"] .footer-right { direction: rtl; }
+html[dir="rtl"] .venn-wrap,
+html[dir="rtl"] .venn-svg,
+html[dir="rtl"] .expression,
+html[dir="rtl"] .timer-line,
+html[dir="rtl"] .bars { direction: ltr; }
+html[dir="rtl"] body,
+html[dir="rtl"] button,
+html[dir="rtl"] p,
+html[dir="rtl"] h1,
+html[dir="rtl"] h2,
+html[dir="rtl"] h3,
+html[dir="rtl"] .eyebrow,
+html[dir="rtl"] .feedback,
+html[dir="rtl"] .modal { font-family: Tahoma, "Segoe UI", sans-serif; }
+html[dir="rtl"] p,
+html[dir="rtl"] .feedback,
+html[dir="rtl"] .modal { line-height: 1.8; }
+@media (max-width: 640px) {
+  .language-switch { padding: .35rem .5rem; font-size: .72rem; }
+}
