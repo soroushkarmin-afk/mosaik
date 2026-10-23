@@ -802,4 +802,21 @@ function isCompleted() {
 
   render();
   syncTimer();
+  
+  // Mosaic intro loader
+  const mosaicLoader = document.getElementById('mosaic-loader');
+
+  if (mosaicLoader) {
+    const hideLoader = () => {
+      mosaicLoader.classList.add('loader-hidden');
+
+      setTimeout(() => {
+        mosaicLoader.remove();
+      }, 700);
+    };
+
+    // Keep the intro visible briefly, then reveal the game.
+    setTimeout(hideLoader, 1800);
+  }
+
 })();
