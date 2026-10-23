@@ -1632,10 +1632,10 @@ button:disabled {
   background: var(--card, #fffdf8);
   color: var(--ink, #263c35);
   border-radius: 999px;
-  padding: .45rem .7rem;
+  padding: .4rem .65rem;
   font: inherit;
-  font-size: .78rem;
-  font-weight: 700;
+  font-size: .70rem;
+  font-weight: 600;
   cursor: pointer;
   white-space: nowrap;
 }
