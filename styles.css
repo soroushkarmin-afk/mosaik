@@ -1515,3 +1515,143 @@ button:disabled {
         transition-duration: .01ms !important
     }
 }
+
+/* =========================
+   MOSAIC INTRO LOADER
+========================= */
+
+#mosaic-loader {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: grid;
+    place-items: center;
+    background: #f5f1e8;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .65s ease, visibility .65s ease;
+}
+
+#mosaic-loader.loader-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.loader-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    animation: loader-enter .8s cubic-bezier(.2,.8,.2,1) both;
+}
+
+.loader-mark {
+    width: 58px;
+    height: 58px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    transform: rotate(-8deg);
+    animation: loader-float 2.5s ease-in-out infinite;
+}
+
+.loader-mark i {
+    display: block;
+    border-radius: 6px;
+    background: #286753;
+}
+
+.loader-mark i:nth-child(2) {
+    opacity: .7;
+}
+
+.loader-mark i:nth-child(3) {
+    opacity: .45;
+}
+
+.loader-mark i:nth-child(4) {
+    opacity: .85;
+}
+
+.loader-content h1 {
+    margin: 22px 0 0;
+    color: #263c35;
+    font: 500 52px/1.1 Fredoka, sans-serif;
+    letter-spacing: -1.5px;
+}
+
+.loader-content h1 span {
+    color: #b98632;
+}
+
+.loader-caption {
+    margin: 10px 0 34px;
+    color: #849087;
+    font: 400 13px 'DM Sans', sans-serif;
+}
+
+.loader-progress {
+    width: 154px;
+    height: 4px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #e3e6db;
+}
+
+.loader-progress-fill {
+    width: 40%;
+    height: 100%;
+    border-radius: inherit;
+    background: #286753;
+    animation: loader-progress 1.5s ease-in-out infinite;
+}
+
+.loader-status {
+    margin-top: 15px;
+    color: #849087;
+    font: 800 9px 'DM Sans', sans-serif;
+    letter-spacing: 1.7px;
+}
+
+@keyframes loader-enter {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes loader-float {
+    0%, 100% {
+        transform: rotate(-8deg) translateY(0);
+    }
+    50% {
+        transform: rotate(-3deg) translateY(-5px);
+    }
+}
+
+@keyframes loader-progress {
+    0% {
+        transform: translateX(-120%);
+    }
+    100% {
+        transform: translateX(390%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .loader-content,
+    .loader-mark,
+    .loader-progress-fill {
+        animation: none;
+    }
+
+    .loader-progress-fill {
+        width: 100%;
+    }
+}
+
