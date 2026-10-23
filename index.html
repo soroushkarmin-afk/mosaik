@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f1e8">
+  <meta name="description" content="Mosaic — a calm, playful way to learn set theory through Venn diagrams.">
+  <title>Mosaic — Set Theory Puzzles</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+  <header class="topbar">
+    <button class="brand" id="homeBtn" aria-label="Mosaic home"><span
+        class="mosaic-mark"><i></i><i></i><i></i><i></i></span><span>mosaic</span></button>
+    <nav class="nav-tabs" aria-label="Main navigation">
+      <button class="nav-tab active" data-tab="play">Play <i></i></button>
+      <button class="nav-tab" data-tab="daily">Daily puzzle <i></i></button>
+      <button class="nav-tab" data-tab="collection">Collection <i></i></button>
+    </nav>
+    <div class="player"><span class="streak"><span aria-hidden="true">🔥</span><b id="streakCount">0 day
+          streak</b></span><button class="avatar" id="profileBtn" title="Local player profile"
+        aria-label="Player profile">✦</button></div>
+  </header>
+
+  <main class="main">
+    <section id="gameView">
+      <div class="level-heading">
+        <div><span class="level-badge" id="levelBadge">GARDEN / LEVEL 01</span>
+          <h1 id="levelTitle">Two things in common</h1>
+          <p class="subheading" id="levelDescription">Find an element that belongs to both sets.</p>
+        </div>
+        <div class="heading-actions"><span class="heading-note" id="headingNote">No timer. Find your
+            rhythm.</span><button class="icon-button" id="pauseBtn" aria-label="Pause game"
+            title="Pause or resume">Ⅱ</button></div>
+      </div>
+
+      <div class="workspace">
+        <aside class="dashboard">
+          <section class="score-card card">
+            <div class="score-block"><span class="eyebrow">YOUR SCORE</span><strong id="scoreValue">0</strong><span
+                class="best">🏆 Personal best: <b id="bestValue">0</b></span></div>
+            <div class="progress-block">
+              <div class="progress-label"><b>Level progress</b><strong id="xpPercent">0%</strong></div>
+              <div class="progress-track"><i id="xpBar"></i></div><small id="xpNote">0 XP earned so far</small>
+            </div>
+            <div class="line-progress">
+              <div class="progress-label"><b>Levels cleared</b><strong id="completedCount">0 of 6</strong></div>
+              <div class="bars" id="levelBars"></div>
+            </div>
+          </section>
+          <button class="hint-button" id="hintBtn"><span>☼</span><b>Need a hint?</b><span class="hint-count"
+              id="hintCount">1</span></button>
+          <div class="secondary-actions"><button class="secondary-button" id="undoBtn">↶
+              <span>Undo</span></button><button class="secondary-button" id="restartBtn">⟲ <span>Restart</span></button>
+          </div>
+          <div class="saved-note"><span class="save-dot"></span><span id="saveLabel">Progress saved on this
+              device</span></div>
+          <p class="small-note">Your progress stays in this browser using local storage.</p>
+        </aside>
+
+        <section class="play-column">
+          <div class="board-status"><span><i></i><b id="movesLabel">8 moves left</b></span><span class="timer-label">◷
+              <b id="timerValue">00:00</b></span></div>
+          <div class="game-card card" id="gameCard">
+            <div class="timer-strip">
+              <div class="timer-icon">◷</div>
+              <div class="timer-line"><i id="timerProgress"></i><span>➜</span></div><strong
+                id="timerLarge">00:00</strong><button id="timerPauseBtn" aria-label="Pause timer">Ⅱ</button>
+            </div>
+            <div class="expression-label">FIND THE REGION THAT MATCHES</div>
+            <div class="expression" id="expression" aria-label="Target expression"><span>A</span><span
+                class="operator">AND</span><span>B</span></div>
+            <div class="venn-wrap" id="vennWrap" aria-label="Interactive Venn diagram">
+              <svg class="venn-svg" viewBox="0 0 360 260" role="img" aria-label="Two overlapping sets A and B">
+                <circle class="circle-a" cx="133" cy="116" r="83"></circle>
+                <circle class="circle-b" cx="227" cy="116" r="83"></circle>
+              </svg>
+              <span class="set-label label-a">A</span><span class="set-label label-b">B</span>
+              <button class="venn-region outside" data-region="outside"
+                aria-label="Choose outside both sets"><span>Outside</span></button>
+              <button class="venn-region only-a" data-region="a" aria-label="Choose A only"><span>A only</span></button>
+              <button class="venn-region only-b" data-region="b" aria-label="Choose B only"><span>B only</span></button>
+              <button class="venn-region overlap" data-region="both" aria-label="Choose A and B overlap"><span>A ∩
+                  B</span></button>
+            </div>
+            <p class="board-instruction">Choose a region in the diagram to place your tile.</p>
+            <div class="feedback" id="feedback" role="status" aria-live="polite">Choose a region to place your tile.
+            </div>
+            <div class="hint-detail hidden" id="hintDetail">☼ <span id="hintText"></span><button id="dismissHint"
+                aria-label="Dismiss hint">×</button></div>
+            <div class="pause-overlay hidden" id="pauseOverlay">
+              <div class="pause-card"><span class="pause-icon">Ⅱ</span>
+                <h2 id="pauseTitle">Take a breath</h2>
+                <p id="pauseMessage">The game and timer are paused.</p><button class="primary-button"
+                  id="overlayAction">Resume play →</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <aside class="guide-column">
+          <section class="guide-card card">
+            <h2><span class="guide-symbol">✧</span> Room for a tip?</h2>
+            <div class="guide-step"><span>1</span>
+              <div><b>Find a fit</b>
+                <p>Choose the region that matches the logical expression.</p>
+              </div>
+            </div>
+            <div class="guide-step"><span>2</span>
+              <div><b>Read the circles</b>
+                <p>A means inside circle A. AND means both conditions must be true.</p>
+              </div>
+            </div>
+            <div class="guide-step"><span>3</span>
+              <div><b>Think ahead</b>
+                <p id="tipThird">Solve the level before your moves run out.</p>
+              </div>
+            </div>
+          </section>
+          <button class="reward-card" id="collectionShortcut">
+            <div class="reward-top"><span>A LITTLE SOMETHING AHEAD</span><span>✧</span></div>
+            <div class="reward-body">
+              <div class="reward-mark"><span class="mosaic-mark small"><i></i><i></i><i></i><i></i></span></div>
+              <div>
+                <h3>Golden hour</h3>
+                <p id="rewardStatus">Unlock after level 4</p>
+              </div><span>→</span>
+            </div>
+          </button>
+          <section class="daily-card card hidden" id="dailyCard">
+            <h3>Today’s puzzle</h3>
+            <p>Find the region that satisfies <b id="dailyGoalText"></b>.</p><button class="primary-button"
+              id="dailySubmit">Check answer ✓</button><small id="dailyMessage"></small>
+          </section>
+        </aside>
+      </div>
+    </section>
+
+    <section id="collectionView" class="collection-page hidden">
+      <div class="page-heading">
+        <div><span class="eyebrow">YOUR LITTLE UNIVERSE</span>
+          <h1>Collection</h1>
+          <p>Unlock new looks by learning one set at a time.</p>
+        </div><span class="mosaic-mark large"><i></i><i></i><i></i><i></i></span>
+      </div>
+      <div class="collection-grid" id="collectionGrid"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="tagline"><span>♧ (C)</span><span>soroush karamian</span></div>
+    <div class="audio-controls"><button id="soundBtn">♫ <b>Sound off</b></button><i></i><button id="musicBtn">♪ Music
+        off</button></div>
+    <div class="footer-right"><button id="howBtn">How to play</button><button id="settingsBtn" aria-label="Settings"
+        title="Settings">settings"o"</button></div>
+  </footer>
+
+  <div class="modal-backdrop hidden" id="modalBackdrop">
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal-close"
+        id="modalClose" aria-label="Close">×</button><span class="eyebrow" id="modalEyebrow">THE BASICS</span>
+      <h2 id="modalTitle">How to play Mosaic</h2>
+      <div id="modalContent"></div>
+      <div class="modal-actions" id="modalActions"></div>
+    </section>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+
+</html>
