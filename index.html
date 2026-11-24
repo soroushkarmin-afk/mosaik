@@ -27,6 +27,7 @@
         class="mosaic-mark"><i></i><i></i><i></i><i></i></span><span>mosaic</span></button>
     <nav class="nav-tabs" aria-label="Main navigation">
       <button class="nav-tab active" data-tab="play">Play <i></i></button>
+      <button class="nav-tab" data-tab="learn">Learn <i></i></button>
       <button class="nav-tab" data-tab="daily">Daily puzzle <i></i></button>
       <button class="nav-tab" data-tab="collection">Collection <i></i></button>
     </nav>
@@ -53,8 +54,12 @@
             <div class="score-block"><span class="eyebrow">YOUR SCORE</span><strong id="scoreValue">0</strong><span
                 class="best">🏆 Personal best: <b id="bestValue">0</b></span></div>
             <div class="progress-block">
-              <div class="progress-label"><b>Level progress</b><strong id="xpPercent">0%</strong></div>
-              <div class="progress-track"><i id="xpBar"></i></div><small id="xpNote">0 XP earned so far</small>
+              <div class="progress-label"><b>XP progress</b><strong id="xpPercent">0%</strong></div>
+              <div class="progress-track"><i id="xpBar"></i></div>
+              <small class="xp-total" id="xpTotal">0 total XP</small>
+              <small id="xpRank">Rank: Seedling</small>
+              <small id="xpNote">0 XP to next milestone</small>
+              <small id="xpHow">Earn XP by clearing a level for the first time, finishing a daily puzzle, completing a lesson or finishing a board-game match.</small>
             </div>
             <div class="line-progress">
               <div class="progress-label"><b>Levels cleared</b><strong id="completedCount">0 of 6</strong></div>
@@ -158,6 +163,47 @@
       </div>
       <div class="collection-grid" id="collectionGrid"></div>
     </section>
+
+    <!-- New standalone Setarea-inspired board game. Existing Mosaic game remains unchanged. -->
+    <section id="boardGameView" class="boardgame-page hidden">
+      <div class="page-heading">
+        <div><span class="eyebrow">SETAREA · BOARD GAME</span>
+          <h1>Setarea board game</h1>
+          <p>Move around the board, collect career cards and complete mathematical missions.</p>
+        </div>
+        <button class="secondary-button" id="boardGameRestart">↻ <span>New match</span></button>
+      </div>
+      <div class="boardgame-layout">
+        <section class="boardgame-main">
+          <div class="boardgame-topline card">
+            <div><span class="eyebrow">YOUR TURN</span><strong id="boardGameRound">Round 1 of 8</strong></div>
+            <div class="boardgame-dice-status"><span id="boardGameLastRoll">🎲 Roll the dice to begin</span><span id="boardGameTurnStatus">Your turn</span></div>
+          </div>
+          <div class="board-track card" id="boardTrack" aria-label="Setarea game board"></div>
+          <section class="boardgame-action card" id="boardGameAction" aria-live="polite"></section>
+          <section class="boardgame-log card"><div class="log-heading"><b>Game log</b><span>Recent events</span></div><div id="boardGameLog"></div></section>
+        </section>
+        <aside class="boardgame-sidebar">
+          <section class="boardgame-players card"><h2>Players</h2><div id="boardGamePlayers"></div></section>
+          <section class="boardgame-hand card"><div class="hand-heading"><h2>Your career cards</h2><span id="boardGameCardCount">0 cards</span></div><div id="boardGameHand"></div></section>
+          <section class="boardgame-help card"><h2>How this game works</h2><p>Land on a space and complete its action. Properties help you build career sets, individual missions practise subsets, group missions explore power sets and cardinality, and elections practise set operations.</p></section>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Learning area follows the five active-learning tasks described in the paper. -->
+    <section id="learnView" class="learn-page hidden">
+      <div class="page-heading">
+        <div><span class="eyebrow">LEARN SET THEORY</span>
+          <h1>Learn the ideas behind the game</h1>
+          <p>Short lessons, clear examples and a quick check after each topic.</p>
+        </div>
+      </div>
+      <div class="learn-layout">
+        <aside class="lesson-nav card" id="lessonNav"></aside>
+        <article class="lesson-card card" id="lessonContent"></article>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
@@ -181,5 +227,4 @@
   
 
 </body>
-
 </html>
